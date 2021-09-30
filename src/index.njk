@@ -1,16 +1,70 @@
 ---
-layout: default
-pagination:
-    data: collections.pagedPosts
-    size: 1
-    alias: paged
-permalink: "{% if paged.number > 1 %}page/{{ paged.number }}/{% endif %}index.html"
+layout: home
 ---
-
-<div class="flex flex-wrap -mx-2">
-    {% include "partials/post-grid.njk" %}
-</div>
-
-{% if collections.posts.length > site.paginate %}
-{% include "partials/paginator.njk" %}
-{% endif %}
+<img class="lg:w-full" src="/assets/img/featured-image.jpg" />
+<section class="flex flex-wrap items-center mt-16">
+	<div class="container flex flex-col items-center px-5 py-5 mx-auto md:flex-row lg:px-28">
+		<div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
+            <h2 class="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font"> Madison, WI </h2>
+            <h1 class="mb-8 text-2xl font-black tracking-tighter text-black md:text-5xl title-font"> This band was conceived to rock. </h1>
+            <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 "> Mother Material is a Madison area band that plays covers from the 90s along with a growing catalogue of originals. </p>
+			<div class="flex flex-col justify-center lg:flex-row">
+                <a class="flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-teal-700 rounded-lg hover:bg-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2" href="/listen"> Listen </a>
+                <p class="mt-2 text-sm text-left text-black md:ml-6 md:mt-0"> Want to book this band? <br class="hidden lg:block">
+                <a href="/contact" class="inline-flex items-center font-semibold text-teal-700 md:mb-2 lg:mb-0 hover:text-black " title="read more"> Let us know » </a>
+                </p>
+            </div>
+		</div>
+	<div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
+			<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1054083646&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/brad-green-479841804" title="Mother Material" target="_blank" style="color: #cccccc; text-decoration: none;">Mother Material</a> · <a href="https://soundcloud.com/brad-green-479841804/role-switch" title="Role Switch - LIVE DEMO" target="_blank" style="color: #cccccc; text-decoration: none;">Role Switch - LIVE DEMO</a></div>
+	</div>
+	</div>
+</section>
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+        <div class="text-center pb-12">
+            <h2 class="text-base font-bold text-indigo-600">
+                Mother Material
+            </h2>
+            <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+                Band Members
+            </h1>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div class="w-full bg-black rounded-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-8">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="/assets/img/brad.jpg" alt="Brad Green">
+                </div>
+                <div class="text-center">
+                    <p class="text-xl text-white font-bold mb-2">Brad Green</p>
+                    <p class="text-base text-gray-400 font-normal">guitar / vocals</p>
+                </div>
+            </div>
+			<div class="w-full bg-black rounded-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-8">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="/assets/img/louis.jpg" alt="Louis Macias">
+                </div>
+                <div class="text-center">
+                    <p class="text-xl text-white font-bold mb-2">Louis Macias</p>
+                    <p class="text-base text-gray-400 font-normal">bass / vocals</p>
+                </div>
+            </div>
+            <div class="w-full bg-black rounded-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-8">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="/assets/img/rob.jpg" alt="Rob Herrick">
+                </div>
+                <div class="text-center">
+                    <p class="text-xl text-white font-bold mb-2">Rob Herrick</p>
+                    <p class="text-base text-gray-400 font-normal">drums</p>
+                </div>
+            </div>
+            <div class="w-full bg-black rounded-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-8">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="/assets/img/tom.jpg" alt="Tom McCarthy">
+                </div>
+                <div class="text-center">
+                    <p class="text-xl text-white font-bold mb-2">Tom McCarthy</p>
+                    <p class="text-base text-gray-400 font-normal">guitar / synth / bass / vocals</p>
+                </div>
+            </div>
+        </div>
+    </section>

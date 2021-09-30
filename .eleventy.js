@@ -13,6 +13,7 @@ module.exports = (config) => {
   config.addWatchTarget("src/assets/js/");
 
   config.addLayoutAlias('default', 'layouts/default.njk');
+  config.addLayoutAlias('home', 'layouts/home.njk');
   config.addLayoutAlias('post', 'layouts/post.njk');
 
   config.addFilter('readableDate', require('./lib/filters/readableDate'));
