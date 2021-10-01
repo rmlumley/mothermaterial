@@ -34,6 +34,9 @@ module.exports = {
       teal: colors.teal
     },
     extend: {
+      backgroundImage: {
+        'round': "url('/assets/img/round.png')",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
