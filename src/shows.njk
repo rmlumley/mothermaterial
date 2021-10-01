@@ -1,5 +1,45 @@
 ---
 layout: default
+pagination:
+    data: collections.pagedPosts
+    size: 1
+    alias: paged
 ---
-
-List shows
+<h2 class="mb-8 text-2xl font-black tracking-tighter text-black md:text-3xl title-font">Upcoming Shows</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    {%- set lazyImage = "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201%201'%20height%3D'500'%20width%3D'960'%20style%3D'background-color%3Argb(203%2C213%2C224)'%2F%3E" -%}
+    {% for post in collections.upcoming %}
+    <div class="w-full bg-white rounded-lg flex flex-col justify-center items-center">
+        <div class="rounded shadow-md h-full">
+            <a href="{{ post.url | url }}">
+                <img class="w-full m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/img/no-image.svg' | url }}{% endif %}" width="960" height="500" alt="This post thumbnail">
+            </a>
+            <div class="px-6 py-5">
+                <div class="font-semibold text-lg mb-2">
+                    <a class="text-gray-900 hover:text-teal-700" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </div>
+                <p class="text-gray-700 mb-1" title="Location">{{ post.data.location }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h2 class="mb-8 text-2xl font-black tracking-tighter text-black md:text-3xl title-font mt-16">Previous Shows</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    {%- set lazyImage = "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201%201'%20height%3D'500'%20width%3D'960'%20style%3D'background-color%3Argb(203%2C213%2C224)'%2F%3E" -%}
+    {% for post in collections.previous  | reverse %}
+    <div class="w-full bg-black rounded-lg flex flex-col justify-center items-center">
+        <div class="rounded shadow-md h-full">
+            <a href="{{ post.url | url }}">
+                <img class="w-full m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/img/no-image.svg' | url }}{% endif %}" width="960" height="500" alt="This post thumbnail">
+            </a>
+            <div class="px-6 py-5">
+                <div class="font-semibold text-lg mb-2">
+                    <a class="text-white hover:text-teal-700" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </div>
+                <p class="text-gray-400 mb-1" title="Location">{{ post.data.location }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
