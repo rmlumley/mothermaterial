@@ -6,3 +6,4 @@ thumb: "locker-room.jpg"
 tags: 
     - previous
 ---
+First show so either you were there or not. The setlist is lost to time.

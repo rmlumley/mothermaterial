@@ -6,9 +6,9 @@
     body {
         font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
     }
-    .mother {
-        font-family: 'Rye', cursive;
-    }
+    .site-title {
+		display: none;
+	}
 }
 
 @layer utilities {
